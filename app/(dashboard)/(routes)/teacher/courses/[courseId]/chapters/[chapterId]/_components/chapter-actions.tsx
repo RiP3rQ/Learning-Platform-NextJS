@@ -26,6 +26,7 @@ export const ChapterActions = ({
   const [isLoading, setIsLoading] = useState(false);
 
   const onClick = async () => {
+    const notification = toast.loading("Please wait...");
     try {
       setIsLoading(true);
 
@@ -33,33 +34,44 @@ export const ChapterActions = ({
         await axios.patch(
           `/api/courses/${courseId}/chapters/${chapterId}/unpublish`
         );
-        toast.success("Chapter unpublished");
+        toast.success("Chapter unpublished", {
+          id: notification,
+        });
       } else {
         await axios.patch(
           `/api/courses/${courseId}/chapters/${chapterId}/publish`
         );
-        toast.success("Chapter published");
+        toast.success("Chapter published", {
+          id: notification,
+        });
       }
 
       router.refresh();
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong", {
+        id: notification,
+      });
     } finally {
       setIsLoading(false);
     }
   };
 
   const onDelete = async () => {
+    const notification = toast.loading("Please wait...");
     try {
       setIsLoading(true);
 
       await axios.delete(`/api/courses/${courseId}/chapters/${chapterId}`);
 
-      toast.success("Chapter deleted");
+      toast.success("Chapter deleted", {
+        id: notification,
+      });
       router.refresh();
       router.push(`/teacher/courses/${courseId}`);
     } catch {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong", {
+        id: notification,
+      });
     } finally {
       setIsLoading(false);
     }
