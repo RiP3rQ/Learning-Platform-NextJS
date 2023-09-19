@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.23.5",
+    "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "20.6.2",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
@@ -16,9 +18,9 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.49.0",
-    "eslint-config-next": "13.4.19",
+    "eslint-config-next": "13.4.12",
     "lucide-react": "^0.279.0",
-    "next": "13.4.19",
+    "next": "13.4.12",
     "postcss": "8.4.30",
     "react": "18.2.0",
     "react-dom": "18.2.0",
