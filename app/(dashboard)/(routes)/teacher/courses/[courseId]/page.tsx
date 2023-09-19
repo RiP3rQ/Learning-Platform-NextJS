@@ -14,6 +14,7 @@ import { TitleForm } from "./_components/title-form";
 import { DescriptionForm } from "./_components/description-form";
 import { ImageForm } from "./_components/image-form";
 import { CategoryForm } from "./_components/category-form";
+import { PriceForm } from "./_components/price-form";
 
 const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
   const { userId } = auth();
@@ -104,7 +105,7 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
                 <IconBadge icon={CircleDollarSign} />
                 <h2 className="text-xl">Sell your course</h2>
               </div>
-              {/* <PriceForm initialData={course} courseId={course.id} /> */}
+              <PriceForm initialData={course} courseId={course.id} />
             </div>
             <div>
               <div className="flex items-center gap-x-2">
