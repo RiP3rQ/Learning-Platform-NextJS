@@ -1,6 +1,12 @@
 
 # 👨‍💻  E-Learning Platfrom (Udemy Clone) 👨‍💻
 
+# App based on the tutorial off CodeWithAntonio
+
+Youtube: https://www.youtube.com/@codewithantonio
+
+Tutorial: https://youtu.be/Big_aFLmekI?si=8Z2FbxHkEJi18VxT
+
 ## Tech stack
 
 - **Next.js 13**
